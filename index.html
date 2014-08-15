@@ -6,45 +6,254 @@
       body * {
         box-sizing: border-box;
       }
+      
+      .container:nth-of-type(1):after {
+        position: absolute;
+        bottom: 20px;
+        width: 20px;
+        height: 20px;
+
+        z-index: 3;
+        content: ' ';
+        left: 50%;
+        margin-left: -10px;
+        background: url(http://files.softicons.com/download/toolbar-icons/black-wireframe-toolbar-icons-by-gentleface/png/32/br_down.png) center center;
+      }
+      
+      .container {
+        font-family: Arial, sans-serif;
+        height: 100%;
+        position:relative;
+      }
+      
+      .container > div {
+        position:absolute;
+        top:50%;
+        margin-top:-125px;
+      }
+      
+      .description {
+        left: 0;
+        width: 50%;
+/*        width: 600px;*/
+        height: 250px;
+        font-size: 2em;
+        display: table;
+        text-align: right;
+        padding: 20px;
+        margin-right: 20px;
+      }
+      
+      .description p {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      
+      .challenge-holder {
+        height: 250px;
+        width: 40%;
+        left: 50%;
+      }
+      
+      .challenge-holder:hover .challenge {
+        background-color: yellow;
+      }
+      
       .challenge {
+        transition: 1s ease;
         box-shadow: -45px 45px 0 15px white,
-                     0 0 0 30px white,
+                    0 0 0 30px white,
                     -150px 0 0 0 crimson,
-                     -150px 30px 0 0 crimson,
-                     150px 0 0 0 crimson,
-                     150px 30px 0 0 crimson,
-                     210px 0 0 0 crimson,
-                     210px 30px 0 0 crimson,
+                    -150px 30px 0 0 crimson,
+                    150px 0 0 0 crimson,
+                    150px 30px 0 0 crimson,
+                    210px 0 0 0 crimson,
+                    210px 30px 0 0 crimson,
                     -150px 0 0 30px white,
-                     -180px 0 0 30px white,
-                     -30px 0 0 30px white,
-                     120px 0 0 30px white,
-                     210px 0 0 30px white,
-                     -60px 0 0 60px crimson,
-                     -180px 0 0 60px crimson,
-                     90px 0 0 60px crimson,
-                     210px 0 0 60px crimson,
-                     -45px 45px 0 45px crimson;
+                    -180px 0 0 30px white,
+                    -30px 0 0 30px white,
+                    120px 0 0 30px white,
+                    210px 0 0 30px white,
+                    -60px 0 0 60px crimson,
+                    -180px 0 0 60px crimson,
+                    90px 0 0 60px crimson,
+                    210px 0 0 60px crimson,
+                    -45px 45px 0 45px crimson;
         width: 30px;
         height: 60px;
         margin: 100px auto;
-        position: relative;
         background: crimson;
       }
       
-      .challenge:after {
-        position:absolute;
+      .container:nth-of-type(2) .challenge {
+        box-shadow: none;
       }
       
-      .challenge:before {
-        position:absolute;
+      .container:nth-of-type(3) .challenge {
+        box-shadow: -150px 30px 0 0 crimson;
+      }
+
+      
+      .container:nth-of-type(4) .challenge {
+        box-shadow: 210px 0 0 0 crimson,
+                    -150px 30px 0 0 crimson;
+      }
+
+      
+      .container:nth-of-type(5) .challenge {
+        box-shadow: 210px 0 0 60px crimson,
+                    -150px 30px 0 0 crimson;
+      }
+      
+      .container:nth-of-type(6) .challenge {
+        box-shadow: -60px 0 0 60px crimson,
+                    -180px 0 0 60px crimson,
+                    90px 0 0 60px crimson,
+                    210px 0 0 60px crimson,
+                    -45px 45px 0 45px crimson;
+      }
+      
+      .container:nth-of-type(7) .challenge {
+        box-shadow: -150px 0 0 30px white,
+                    -180px 0 0 30px white,
+                    -30px 0 0 30px white,
+                    120px 0 0 30px white,
+                    210px 0 0 30px white,
+                    -60px 0 0 60px crimson,
+                    -180px 0 0 60px crimson,
+                    90px 0 0 60px crimson,
+                    210px 0 0 60px crimson,
+                    -45px 45px 0 45px crimson;
+      }
+      
+      .container:nth-of-type(9) .challenge {
+        box-shadow: none;
+      }
+      
+    
+      
+      .container:nth-of-type(9) .challenge-holder:hover .challenge {
+        box-shadow: -45px 45px 0 15px white,
+                    0 0 0 30px white,
+                    -150px 0 0 0 crimson,
+                    -150px 30px 0 0 crimson,
+                    150px 0 0 0 crimson,
+                    150px 30px 0 0 crimson,
+                    210px 0 0 0 crimson,
+                    210px 30px 0 0 crimson,
+                    -150px 0 0 30px white,
+                    -180px 0 0 30px white,
+                    -30px 0 0 30px white,
+                    120px 0 0 30px white,
+                    210px 0 0 30px white,
+                    -60px 0 0 60px crimson,
+                    -180px 0 0 60px crimson,
+                    90px 0 0 60px crimson,
+                    210px 0 0 60px crimson,
+                    -45px 45px 0 45px crimson;
+      }
+      
+      .container:nth-of-type(9) .challenge-holder {
+        position: relative;
+      }
+      
+      .container:nth-of-type(9) .challenge-holder:after {
+        content: '(hover me)';
+        position: absolute;
+        color: #777777;
+        left: 45%;
+        top: 60%;
       }
     
     </style>
     
   </head>
   <body>
-    <div class='challenge'></div>
     
+    <div class='container'>
+      <div class='description'>
+        <p>How to make the <a href='https://www.npmjs.org/static/img/npm.png'>npm logo</a> using <b style='display:block;font-size:1.5em;padding: 10px 0;'>only one HTML element.</b></p></div>
+      <div class='challenge-holder'>
+        <div class='challenge'></div> 
+      </div>     
+    </div>
+    
+    <div class='container'>
+      <div class='description'>
+        <p>Start with an element.</p></div>
+      <div class='challenge-holder'>
+        <div class='challenge'></div> 
+      </div>     
+    </div>
+    
+    <div class='container'>
+      <div class='description'>
+        <p>Give it a 'box-shadow' property. 
+          You can pass it x- and y- offsets to move around your 'shadow.'</p>
+      </div>
+      <div class='challenge-holder'>
+        <div class='challenge'></div> 
+      </div>     
+    </div>
+    
+    <div class='container'>
+      <div class='description'>
+        <p>Give your element multiple 'shadows' by 
+          separating the property values with commas.</p>
+      </div>
+      <div class='challenge-holder'>
+        <div class='challenge'></div> 
+      </div>     
+    </div>
+    
+    <div class='container'>
+      <div class='description'>
+        <p>Make the box-shadows larger by increasing the 'spread' value.</p></div>
+      <div class='challenge-holder'>
+        <div class='challenge'></div> 
+      </div>     
+    </div>
+    
+    <div class='container'>
+      <div class='description'>
+        <p>Add lots more box-shadows.</p></div>
+      <div class='challenge-holder'>
+        <div class='challenge'></div> 
+      </div>     
+    </div>
+    
+    <div class='container'>
+      <div class='description'>
+        <p>Add even more box-shadows. Turns out you can add just about as many box shadows as you like.</p></div>
+      <div class='challenge-holder'>
+        <div class='challenge'></div> 
+      </div>     
+    </div>
+    
+    <div class='container'>
+      <div class='description'>
+        <p>Add a few more box-shadows, and voila! You have a logo.</p></div>
+      <div class='challenge-holder'>
+        <div class='challenge'></div> 
+      </div>     
+    </div>
+    
+    <div class='container'>
+      <div class='description'>
+        <p><b style='display:block;font-size:1.5em;padding:10px 0;'>BONUS ROUND</b> 
+          given the right :hover rule, <br>
+          this is a cool way to make a logo appear...</p></div>
+      <div class='challenge-holder'>
+        <div class='challenge'></div> 
+      </div>     
+    </div>
+    
+
+    <div style='margin-top:20px;text-align:center;'>
+      by andrew richards <a href='http://www.drwrchrds.com'>site</a> 
+      <a href='http://twitter.com/drwrchrds'>@drwrchrds</a>
+      <a href='http://github.com/drwrchrds'>github</a> 
+      <a href='http://linkedin.com/in/drwrchrds'>linkedin</a>
+    </div>
   </body>
 </html>
